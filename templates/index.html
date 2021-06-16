@@ -1,0 +1,20 @@
+
+{% extends 'base/base.html' %}
+
+{% block title%} 
+{{title}} 
+{% endblock %}
+
+{% block content %}
+
+    {% from "_macro.html" import render_field %}
+    <form> 
+        {{ render_field (form.username) }}
+        {{ render_field (form.email) }}
+        {{ render_field (form.comment) }}
+        {{ render_field (form.honeypot) }}
+        <button type="submit" class="btn btn-primary">Send</button>
+        <input type='hidden' name='csrf_token' value='{{ csrf_token() }}'/>
+    </form>
+  
+{% endblock %}

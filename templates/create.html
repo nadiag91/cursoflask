@@ -1,0 +1,20 @@
+
+{% extends 'base/base.html' %}
+
+{% block title%} 
+    <h1> {{title}} </h1> 
+{% endblock %}
+
+{% block content %}
+
+    {% from "_macro.html" import render_field %}
+    <form> 
+        {{ render_field (form.username) }}
+        {{ render_field (form.email) }}
+        {{ render_field (form.password) }}
+        
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        
+    </form>
+  
+{% endblock %}
