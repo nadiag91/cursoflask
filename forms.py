@@ -30,6 +30,7 @@ class LoginForm(Form):
     password = PasswordField('Password', [validators
     .data_required(message= 'Password obligatorio')])
 
+#comment
 class CreateForm(Form):
     username = TextField ('Username',
                 [
