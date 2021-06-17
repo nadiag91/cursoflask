@@ -31,6 +31,8 @@ class LoginForm(Form):
     .data_required(message= 'Password obligatorio')])
 
 #comment
+#another line
+#asd
 class CreateForm(Form):
     username = TextField ('Username',
                 [
